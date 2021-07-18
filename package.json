@@ -1,0 +1,19 @@
+{
+  "name": "hire-developers",
+  "version": "1.0.0",
+  "description": "hire developer in community",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItsMeHrithik/hire-developers.git"
+  },
+  "author": "hrithik mahadik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ItsMeHrithik/hire-developers/issues"
+  },
+  "homepage": "https://github.com/ItsMeHrithik/hire-developers#readme"
+}
