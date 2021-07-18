@@ -5,6 +5,12 @@ const app = express();
 const users = require("./routes/api/users");
 const posts = require("./routes/api/posts");
 const profile = require("./routes/api/profile");
+const boydParser = require("body-parser");
+const passport = require("passport");
+
+//Body parser middleware
+app.use(boydParser.urlencoded({ extended: false }));
+app.use(boydParser.json());
 
 //DB configuration
 const db = require("./config/keys").mongoURI;
@@ -18,9 +24,11 @@ mongoose
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log(err));
 
-app.get("/", (req, res) =>
-  res.send("you are on the homepage of hire developers")
-);
+//passport middleware
+app.use(passport.initialize());
+
+//passport Config
+require("./config/passport.js")(passport);
 
 //Use Routes
 app.use("/api/users", users);
